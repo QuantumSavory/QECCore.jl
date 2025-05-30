@@ -1,5 +1,5 @@
 module QECCore
 
-# Write your package code here.
-
+include("interfaces.jl")
+include("codes/fivequbit.jl")
 end
