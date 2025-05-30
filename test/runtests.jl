@@ -1,6 +1,6 @@
 using QECCore
 using Test
 
-@testset "QECCore.jl" begin
-    # Write your tests here.
+@testset "fivequbit" begin
+    include("codes/fivequbit.jl")
 end
