@@ -1,10 +1,14 @@
 using QECCore
 using Documenter
+using DocumenterCitations
 using LiveServer
 
 DocMeta.setdocmeta!(QECCore, :DocTestSetup, :(using QECCore); recursive=true)
 
-makedocs(;
+bib = CitationBibliography(joinpath(@__DIR__,"src/references.bib"),style=:authoryear)
+
+makedocs(
+    plugins = [bib],
     modules=[QECCore],
     authors="nzy1997",
     sitename="QECCore.jl",
@@ -15,6 +19,8 @@ makedocs(;
     ),
     pages=[
         "Home" => "index.md",
+        "References" => "references.md",
+        "Manual" => "man.md",
     ],
 )
 
